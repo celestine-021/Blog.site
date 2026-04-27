@@ -1,18 +1,25 @@
 const blog = {
-  name: "My Personal Blog",
-  about: "I am learning React and building components step by step.",
+  name: "Updated Blog Title",
+  about: "This is my updated blog about learning React.",
+  image: "https://via.placeholder.com/200",
   posts: [
     {
       id: 1,
-      title: "My First Post",
-      date: "2026-04-01",
-      preview: "This is my first experience with React."
+      title: "Updated First Post",
+      date: "2026-04-15",
+      preview: "React components are reusable."
     },
     {
       id: 2,
-      title: "Learning Props",
+      title: "Components",
       date: "2026-04-10",
-      preview: "Props help us pass data between components."
+      preview: "Components make React reusable."
+    },
+    {
+      id: 3,
+      title: "New Article",
+      date: "2026-04-20",
+      preview: "Testing dynamic content updates."
     }
   ]
 };

@@ -1,16 +1,135 @@
-# React + Vite
+# React Blog Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern blog application built with React, Vite, and modern JavaScript. This project demonstrates component-based architecture with props-driven content rendering.
 
-Currently, two official plugins are available:
+## 🚀 Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-## React Compiler
+### Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd react-101
+```
 
-## Expanding the ESLint configuration
+2. Install dependencies:
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## 📋 Available Scripts
+
+- `npm run dev` - Start the development server
+- `npm run build` - Build the project for production
+- `npm run preview` - Preview the production build
+- `npm run lint` - Run ESLint for code quality checks
+- `npm test` - Run Jest tests
+
+## 🏗️ Project Structure
+
+```
+src/
+├── components/
+│   ├── Header.jsx      # Blog title header
+│   ├── About.jsx       # Blog description and logo
+│   ├── ArticleList.jsx # Container for all articles
+│   └── Article.jsx     # Individual article component
+├── data/
+│   └── blog.js         # Blog data and posts
+├── App.jsx             # Main application component
+├── App.css             # Component-specific styles
+├── index.css           # Global styles
+└── main.jsx            # Application entry point
+```
+
+## 🧩 Components Overview
+
+### App Component
+- **Location**: `src/App.jsx`
+- **Purpose**: Main application container
+- **Children**: Header, About, ArticleList
+- **Data Source**: `src/data/blog.js`
+
+### Header Component
+- **Location**: `src/components/Header.jsx`
+- **Purpose**: Displays the blog title
+- **Props**: `name` (string)
+- **Connected to**: App.jsx
+
+### About Component
+- **Location**: `src/components/About.jsx`
+- **Purpose**: Shows blog description and logo
+- **Props**: `about` (string), `image` (string URL)
+- **Connected to**: App.jsx
+
+### ArticleList Component
+- **Location**: `src/components/ArticleList.jsx`
+- **Purpose**: Renders a collection of articles
+- **Props**: `posts` (array of post objects)
+- **Children**: Multiple Article components
+- **Connected to**: App.jsx, Article.jsx
+
+### Article Component
+- **Location**: `src/components/Article.jsx`
+- **Purpose**: Displays individual blog post
+- **Props**: `title`, `date`, `preview` (all strings)
+- **Connected to**: ArticleList.jsx
+
+## 📸 Screenshots
+
+### Homepage
+![Blog Homepage](./screenshots/homepage.png)
+*The main blog page showing the header, about section, and list of articles.*
+
+### Component Structure
+![Component Architecture](./screenshots/components.png)
+*Visual representation of the component hierarchy and data flow.*
+
+## 🧪 Testing
+
+The project includes Jest tests for component rendering and prop validation:
+
+```bash
+npm test
+```
+
+Tests verify that:
+- Components render correctly
+- Props are passed and displayed properly
+- Dynamic content updates work as expected
+
+## 🎨 Styling
+
+- **Global Styles**: `src/index.css` - Base typography, colors, and layout
+- **Component Styles**: `src/App.css` - Specific component styling
+- **Responsive Design**: Mobile-friendly layout with CSS media queries
+
+## 📚 Learn More
+
+- [React Documentation](https://react.dev)
+- [Vite Documentation](https://vitejs.dev)
+- [Jest Testing](https://jestjs.io)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests for new functionality
+5. Submit a pull request
+
+## 📄 License
+
+This project is part of a learning exercise and is available under the MIT License.
