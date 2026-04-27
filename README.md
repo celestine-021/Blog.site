@@ -28,13 +28,20 @@ npm run dev
 
 4. Open your browser and navigate to `http://localhost:5173`
 
-## 📋 Available Scripts
+## � Screenshots
 
-- `npm run dev` - Start the development server
-- `npm run build` - Build the project for production
-- `npm run preview` - Preview the production build
-- `npm run lint` - Run ESLint for code quality checks
-- `npm test` - Run Jest tests
+### Homepage
+![Blog Homepage](screenshots/homepage.png)
+The main blog page showing the header with blog title, about section with logo and description, and a list of articles with titles, dates, and previews.
+
+### Component Architecture
+![Component Tree](screenshots/components.png)
+Visual representation of the React component hierarchy:
+- App (root component)
+  - Header (blog title)
+  - About (blog description and logo)
+  - ArticleList (container for articles)
+    - Article (individual post)
 
 ## 🏗️ Project Structure
 
